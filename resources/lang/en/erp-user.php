@@ -1,0 +1,37 @@
+<?php 
+return [
+    'labels' => [
+        'ErpUser' => 'ErpUser',
+    ],
+    'fields' => [
+        'user_role_id' => 'user_role_id',
+        'user_type(staff)' => 'user_type(staff)',
+        'company_id' => 'company_id',
+        'first_name' => 'first_name',
+        'last_name' => 'last_name',
+        'email' => 'email',
+        'username' => 'username',
+        'password' => 'password',
+        'company_name' => 'company_name',
+        'trading_name' => 'trading_name',
+        'registration_no' => 'registration_no',
+        'government_tax' => 'government_tax',
+        'company_type_id' => 'company_type_id',
+        'profile_photo' => 'profile_photo',
+        'contact_number' => 'contact_number',
+        'gender' => 'gender',
+        'address_1' => 'address_1',
+        'address_2' => 'address_2',
+        'city' => 'city',
+        'state' => 'state',
+        'zipcode' => 'zipcode',
+        'country' => 'country',
+        'last_login_date' => 'last_login_date',
+        'last_logout_date' => 'last_logout_date',
+        'last_login_ip' => 'last_login_ip',
+        'is_logged_in' => 'is_logged_in',
+        'is_active' => 'is_active',
+    ],
+    'options' => [
+    ],
+];
