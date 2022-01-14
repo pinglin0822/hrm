@@ -22,7 +22,9 @@ class LanguageController extends AdminController
             $grid->column('language_name');
             $grid->column('language_code');
             $grid->column('language_flag');
-            $grid->column('is_active');
+            $grid->column('is_active')->display(function ($is_active) {
+                return $is_active ? 'true' : 'false';
+            });
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
         

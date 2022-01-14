@@ -27,7 +27,9 @@ class LeaveApplicationController extends AdminController
             $grid->column('reason');
             $grid->column('remarks');
             $grid->column('status');
-            $grid->column('is_half_day');
+            $grid->column('is_half_day')->display(function ($is_half_day) {
+                return $is_half_day ? 'true' : 'false';
+            });
             $grid->column('leave_attachment');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();

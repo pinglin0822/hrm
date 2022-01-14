@@ -35,11 +35,17 @@ class PayslipController extends AdminController
             $grid->column('net_salary');
             $grid->column('payment_method');
             $grid->column('pay_comments');
-            $grid->column('is_payment');
+            $grid->column('is_payment')->display(function ($is_payment) {
+                return $is_payment ? 'true' : 'false';
+            });
             $grid->column('year_to_date');
-            $grid->column('is_advance_salary_deduct');
+            $grid->column('is_advance_salary_deduct')->display(function ($is_advance_salary_deduct) {
+                return $is_advance_salary_deduct ? 'true' : 'false';
+            });
             $grid->column('advance_salary_amount');
-            $grid->column('is_loan_deduct');
+            $grid->column('is_loan_deduct')->display(function ($is_loan_deduct) {
+                return $is_loan_deduct ? 'true' : 'false';
+            });
             $grid->column('loan_amount');
             $grid->column('status');
             $grid->column('created_at');

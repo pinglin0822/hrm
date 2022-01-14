@@ -24,7 +24,9 @@ class HolidayController extends AdminController
             $grid->column('description');
             $grid->column('start_date');
             $grid->column('end_date');
-            $grid->column('is_published');
+            $grid->column('is_published')->display(function ($is_published) {
+                return $is_published ? 'true' : 'false';
+            });
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
         

@@ -27,7 +27,9 @@ class TimesheetRequestController extends AdminController
             $grid->column('clock_out');
             $grid->column('total_hours');
             $grid->column('request_reason');
-            $grid->column('is_approved');
+            $grid->column('is_approved')->display(function ($is_approved) {
+                return $is_approved ? 'true' : 'false';
+            });
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
         

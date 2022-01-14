@@ -21,7 +21,9 @@ class PayslipStatutoryDeductionController extends AdminController
             $grid->column('id')->sortable();
             $grid->column('payslip_id');
             $grid->column('staff_id');
-            $grid->column('is_fixed');
+            $grid->column('is_fixed')->display(function ($is_fixed) {
+                return $is_fixed ? 'true' : 'false';
+            });
             $grid->column('pay_title');
             $grid->column('pay_amount');
             $grid->column('salary_month');
